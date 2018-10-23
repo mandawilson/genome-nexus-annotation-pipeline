@@ -65,11 +65,11 @@
       <version>${slf4j.version}</version>
     </dependency>
     <!-- cbioportal -->
-    <dependency>
+    <!--dependency>
       <groupId>com.github.cbioportal</groupId>
       <artifactId>cbioportal</artifactId>
       <version>b6b7b3f8332b94f01adc9e9263af8f2fe2b4e09a</version>
-    </dependency>
+    </dependency-->
     <!-- api client -->
     <dependency>
       <groupId>com.github.genome-nexus.genome-nexus-java-api-client</groupId>

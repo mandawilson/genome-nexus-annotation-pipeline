@@ -77,6 +77,26 @@ public class MutationRecord {
     protected String tAltCount;
     protected String nRefCount;
     protected String nAltCount;
+    protected String dipLogR;
+    protected String cellularFraction;
+    protected String totalCopyNumber;
+    protected String minorCopyNumber;
+    protected String cellularFractionEm;
+    protected String totalCopyNumberEm;
+    protected String minorCopyNumberEm;
+    protected String purity;
+    protected String ploidy;
+    protected String ccfMCopies;
+    protected String ccfMCopiesLower;
+    protected String ccfMCopiesUpper;
+    protected String ccfMCopiesProb95;
+    protected String ccfMCopiesProb90;
+    protected String ccfMCopiesEm;
+    protected String ccfMCopiesLowerEm;
+    protected String ccfMCopiesUpperEm;
+    protected String ccfMCopiesProb95Em;
+    protected String ccfMCopiesProb90Em;
+
     protected Map<String, String> additionalProperties = new LinkedHashMap<>();
     protected List<String> header = new ArrayList<>();
 
@@ -93,7 +113,11 @@ public class MutationRecord {
             String verificationStatus, String validationStatus, String mutationStatus, String sequencingPhase,
             String sequencingSource, String validationMethod, String score, String bamFile, String sequencer,
             String tumorSampleUUID, String matchedNormSampleUUID, String tRefCount, String tAltCount,
-            String nRefCount, String nAltCount, Map<String, String> additionalProperties) {
+            String nRefCount, String nAltCount, String dipLogR, String cellularFraction, String totalCopyNumber,
+            String minorCopyNumber, String cellularFractionEm, String totalCopyNumberEm, String minorCopyNumberEm,
+            String purity, String ploidy, String ccfMCopies, String ccfMCopiesLower, String ccfMCopiesUpper,
+            String ccfMCopiesProb95, String ccfMCopiesProb90, String ccfMCopiesEm, String ccfMCopiesLowerEm,
+            String ccfMCopiesUpperEm, String ccfMCopiesProb95Em, String ccfMCopiesProb90Em, Map<String, String> additionalProperties) {
 
         this.hugoSymbol = hugoSymbol;
         this.entrezGeneId = entrezGeneId;
@@ -133,6 +157,25 @@ public class MutationRecord {
         this.tAltCount = tAltCount;
         this.nRefCount = nRefCount;
         this.nAltCount = nAltCount;
+        this.dipLogR = dipLogR;
+        this.cellularFraction = cellularFraction;
+        this.totalCopyNumber = totalCopyNumber;
+        this.minorCopyNumber = minorCopyNumber;
+        this.cellularFractionEm = cellularFractionEm;
+        this.totalCopyNumberEm = totalCopyNumberEm;
+        this.minorCopyNumberEm = minorCopyNumberEm;
+        this.purity = purity;
+        this.ploidy = ploidy;
+        this.ccfMCopies = ccfMCopies;
+        this.ccfMCopiesLower = ccfMCopiesLower;
+        this.ccfMCopiesUpper = ccfMCopiesUpper;
+        this.ccfMCopiesProb95 = ccfMCopiesProb95;
+        this.ccfMCopiesProb90 = ccfMCopiesProb90;
+        this.ccfMCopiesEm = ccfMCopiesEm;
+        this.ccfMCopiesLowerEm = ccfMCopiesLowerEm;
+        this.ccfMCopiesUpperEm = ccfMCopiesUpperEm;
+        this.ccfMCopiesProb95Em = ccfMCopiesProb95Em;
+        this.ccfMCopiesProb90Em = ccfMCopiesProb90Em;
         this.additionalProperties = additionalProperties;
         initHeader();
     }
@@ -441,6 +484,158 @@ public class MutationRecord {
         this.nAltCount = nAltCount;
     }
 
+    public String getDIPLOGR() {
+        return dipLogR;
+    }
+
+    public void setDIPLOGR(String dipLogR) {
+        this.dipLogR = dipLogR;
+    }
+
+    public String getCF() {
+        return cellularFraction;
+    }
+
+    public void setCF(String cellularFraction) {
+        this.cellularFraction = cellularFraction;
+    }
+
+    public String getTCN() {
+        return totalCopyNumber;
+    }
+
+    public void setTCN(String totalCopyNumber) {
+        this.totalCopyNumber = totalCopyNumber;
+    }
+
+    public String getLCN() {
+        return minorCopyNumber;
+    }
+
+    public void setLCN(String minorCopyNumber) {
+        this.minorCopyNumber = minorCopyNumber;
+    }
+
+    public String getCF_EM() {
+        return cellularFractionEm;
+    }
+
+    public void setCF_EM(String cellularFractionEm) {
+        this.cellularFractionEm = cellularFractionEm;
+    }
+
+    public String getTCN_EM() {
+        return totalCopyNumberEm;
+    }
+
+    public void setTCN_EM(String totalCopyNumberEm) {
+        this.totalCopyNumberEm = totalCopyNumberEm;
+    }
+
+    public String getLCN_EM() {
+        return minorCopyNumberEm;
+    }
+
+    public void setLCN_EM(String minorCopyNumberEm) {
+        this.minorCopyNumberEm = minorCopyNumberEm;
+    }
+
+    public String getPURITY() {
+        return purity;
+    }
+
+    public void setPURITY(String purity) {
+        this.purity = purity;
+    }
+
+    public String getPLOIDY() {
+        return ploidy;
+    }
+
+    public void setPLOIDY(String ploidy) {
+        this.ploidy = ploidy;
+    }
+
+    public String getCCF_MCOPIES() {
+        return ccfMCopies;
+    }
+
+    public void setCCF_MCOPIES(String ccfMCopies) {
+        this.ccfMCopies = ccfMCopies;
+    }
+
+    public String getCCF_MCOPIES_LOWER() {
+        return ccfMCopiesLower;
+    }
+
+    public void setCCF_MCOPIES_LOWER(String ccfMCopiesLower) {
+        this.ccfMCopiesLower = ccfMCopiesLower;
+    }
+
+    public String getCCF_MCOPIES_UPPER() {
+        return ccfMCopiesUpper;
+    }
+
+    public void setCCF_MCOPIES_UPPER(String ccfMCopiesUpper) {
+        this.ccfMCopiesUpper = ccfMCopiesUpper;
+    }
+
+    public String getCCF_MCOPIES_PROB95() {
+        return ccfMCopiesProb95;
+    }
+
+    public void setCCF_MCOPIES_PROB95(String ccfMCopiesProb95) {
+        this.ccfMCopiesProb95 = ccfMCopiesProb95;
+    }
+
+    public String getCCF_MCOPIES_PROB90() {
+        return ccfMCopiesProb90;
+    }
+
+    public void setCCF_MCOPIES_PROB90(String ccfMCopiesProb90) {
+        this.ccfMCopiesProb90 = ccfMCopiesProb90;
+    }
+
+    public String getCCF_MCOPIES_EM() {
+        return ccfMCopiesEm;
+    }
+
+    public void setCCF_MCOPIES_EM(String ccfMCopiesEm) {
+        this.ccfMCopiesEm = ccfMCopiesEm;
+    }
+
+    public String getCCF_MCOPIES_LOWER_EM() {
+        return ccfMCopiesLowerEm;
+    }
+
+    public void setCCF_MCOPIES_LOWER_EM(String ccfMCopiesLowerEm) {
+        this.ccfMCopiesLowerEm = ccfMCopiesLowerEm;
+    }
+
+    public String getCCF_MCOPIES_UPPER_EM() {
+        return ccfMCopiesUpperEm;
+    }
+
+    public void setCCF_MCOPIES_UPPER_EM(String ccfMCopiesUpperEm) {
+        this.ccfMCopiesUpperEm = ccfMCopiesUpperEm;
+    }
+
+    public String getCCF_MCOPIES_PROB95_EM() {
+        return ccfMCopiesProb95Em;
+    }
+
+    public void setCCF_MCOPIES_PROB95_EM(String ccfMCopiesProb95Em) {
+        this.ccfMCopiesProb95Em = ccfMCopiesProb95Em;
+    }
+
+    public String getCCF_MCOPIES_PROB90_EM() {
+        return ccfMCopiesProb90Em;
+    }
+
+    public void setCCF_MCOPIES_PROB90_EM(String ccfMCopiesProb90Em) {
+        this.ccfMCopiesProb90Em = ccfMCopiesProb90Em;
+    }
+
     public void addAdditionalProperty(String property, String value) {
         this.additionalProperties.put(property, value);
     }
@@ -506,5 +701,24 @@ public class MutationRecord {
         header.add("t_alt_count");
         header.add("n_ref_count");
         header.add("n_alt_count");
+        header.add("dipLogR");
+        header.add("cf");
+        header.add("tcn");
+        header.add("lcn");
+        header.add("cf.em");
+        header.add("tcn.em");
+        header.add("lcn.em");
+        header.add("purity");
+        header.add("ploidy");
+        header.add("ccf_Mcopies");
+        header.add("ccf_Mcopies_lower");
+        header.add("ccf_Mcopies_upper");
+        header.add("ccf_Mcopies_prob95");
+        header.add("ccf_Mcopies_prob90");
+        header.add("ccf_Mcopies_em");
+        header.add("ccf_Mcopies_lower_em");
+        header.add("ccf_Mcopies_upper_em");
+        header.add("ccf_Mcopies_prob95_em");
+        header.add("ccf_Mcopies_prob90_em");
     }
 }

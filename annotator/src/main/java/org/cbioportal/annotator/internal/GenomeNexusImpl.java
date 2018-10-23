@@ -183,6 +183,25 @@ public class GenomeNexusImpl implements Annotator {
                 mRecord.getT_ALT_COUNT(),
                 mRecord.getN_REF_COUNT(),
                 mRecord.getN_ALT_COUNT(),
+                mRecord.getDIPLOGR(),
+                mRecord.getCF(),
+                mRecord.getTCN(),
+                mRecord.getLCN(),
+                mRecord.getCF_EM(),
+                mRecord.getTCN_EM(),
+                mRecord.getLCN_EM(),
+                mRecord.getPURITY(),
+                mRecord.getPLOIDY(),
+                mRecord.getCCF_MCOPIES(),
+                mRecord.getCCF_MCOPIES_LOWER(),
+                mRecord.getCCF_MCOPIES_UPPER(),
+                mRecord.getCCF_MCOPIES_PROB95(),
+                mRecord.getCCF_MCOPIES_PROB90(),
+                mRecord.getCCF_MCOPIES_EM(),
+                mRecord.getCCF_MCOPIES_LOWER_EM(),
+                mRecord.getCCF_MCOPIES_UPPER_EM(),
+                mRecord.getCCF_MCOPIES_PROB95_EM(),
+                mRecord.getCCF_MCOPIES_PROB90_EM(),
                 resolveHgvsc(),
                 resolveHgvsp(),
                 resolveHgvspShort(),
@@ -202,7 +221,7 @@ public class GenomeNexusImpl implements Annotator {
         MutationRecord record = new MutationRecord();
         for (String header : record.getHeader()) {
             if(mafLine.keySet().contains(header)) {
-                record.getClass().getMethod("set" + header.toUpperCase(), String.class).invoke(record, mafLine.remove(header));
+                record.getClass().getMethod("set" + header.toUpperCase().replace(".", "_"), String.class).invoke(record, mafLine.remove(header));
             }
         }
         record.setAdditionalProperties(mafLine);

@@ -92,6 +92,25 @@ public class AnnotatedRecord extends MutationRecord{
         String tAltCount,
         String nRefCount,
         String nAltCount,
+        String dipLogR,
+        String cellularFraction,
+        String totalCopyNumber,
+        String minorCopyNumber,
+        String cellularFractionEm,
+        String totalCopyNumberEm,
+        String minorCopyNumberEm,
+        String purity,
+        String ploidy,
+        String ccfMCopies,
+        String ccfMCopiesLower,
+        String ccfMCopiesUpper,
+        String ccfMCopiesProb95,
+        String ccfMCopiesProb90,
+        String ccfMCopiesEm,
+        String ccfMCopiesLowerEm,
+        String ccfMCopiesUpperEm,
+        String ccfMCopiesProb95Em,
+        String ccfMCopiesProb90Em,
         String hgvsc,
         String hgvsp,
         String hgvspShort,
@@ -142,6 +161,25 @@ public class AnnotatedRecord extends MutationRecord{
             tAltCount,
             nRefCount,
             nAltCount,
+            dipLogR,
+            cellularFraction,
+            totalCopyNumber,
+            minorCopyNumber,
+            cellularFractionEm,
+            totalCopyNumberEm,
+            minorCopyNumberEm,
+            purity,
+            ploidy,
+            ccfMCopies,
+            ccfMCopiesLower,
+            ccfMCopiesUpper,
+            ccfMCopiesProb95,
+            ccfMCopiesProb90,
+            ccfMCopiesEm,
+            ccfMCopiesLowerEm,
+            ccfMCopiesUpperEm,
+            ccfMCopiesProb95Em,
+            ccfMCopiesProb90Em,
             additionalProperties);
         this.hgvsc = hgvsc;
         this.hgvsp = hgvsp;
@@ -155,7 +193,7 @@ public class AnnotatedRecord extends MutationRecord{
         this.consequence = consequence;
         addAnnotatedFieldsToHeader();
     }
-    
+
     public AnnotatedRecord(MutationRecord mRecord) {
         Map<String, String> additionalProperties = mRecord.getAdditionalProperties();
         this.hugoSymbol = mRecord.getHUGO_SYMBOL();
@@ -196,6 +234,25 @@ public class AnnotatedRecord extends MutationRecord{
         this.tAltCount = mRecord.getT_ALT_COUNT();
         this.nRefCount = mRecord.getN_REF_COUNT();
         this.nAltCount = mRecord.getN_ALT_COUNT();
+        this.dipLogR = mRecord.getDIPLOGR();
+        this.cellularFraction = mRecord.getCF();
+        this.totalCopyNumber = mRecord.getTCN();
+        this.minorCopyNumber = mRecord.getLCN();
+        this.cellularFractionEm = mRecord.getCF_EM();
+        this.totalCopyNumberEm = mRecord.getTCN_EM();
+        this.minorCopyNumberEm = mRecord.getLCN_EM();
+        this.purity = mRecord.getPURITY();
+        this.ploidy = mRecord.getPLOIDY();
+        this.ccfMCopies = mRecord.getCCF_MCOPIES();
+        this.ccfMCopiesLower = mRecord.getCCF_MCOPIES_LOWER();
+        this.ccfMCopiesUpper = mRecord.getCCF_MCOPIES_UPPER();
+        this.ccfMCopiesProb95 = mRecord.getCCF_MCOPIES_PROB95();
+        this.ccfMCopiesProb90 = mRecord.getCCF_MCOPIES_PROB90();
+        this.ccfMCopiesEm = mRecord.getCCF_MCOPIES_EM();
+        this.ccfMCopiesLowerEm = mRecord.getCCF_MCOPIES_LOWER_EM();
+        this.ccfMCopiesUpperEm = mRecord.getCCF_MCOPIES_UPPER_EM();
+        this.ccfMCopiesProb95Em = mRecord.getCCF_MCOPIES_PROB95_EM();
+        this.ccfMCopiesProb90Em = mRecord.getCCF_MCOPIES_PROB90_EM();
         this.hgvsc = additionalProperties.get("HGVSc") != null ? additionalProperties.get("HGVSc") : "";
         this.hgvsp = additionalProperties.get("HGVSp") != null ? additionalProperties.get("HGVSp") : "";
         this.hgvspShort = additionalProperties.get("HGVSp_Short");
