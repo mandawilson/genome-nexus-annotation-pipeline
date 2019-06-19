@@ -71,7 +71,7 @@
       <version>f249a409ae112f18d4f4df578d35abf74bdad7fc</version-->
       <groupId>com.github.mandawilson</groupId>
       <artifactId>cbioportal</artifactId>
-      <version>b5a565aad0d8fdb4842b59e59eb75647f2857d03</version>
+      <version>b688d8ee56566e50af8cb11dbc368bf111401104</version>
     </dependency>
     <!-- api client -->
     <dependency>
